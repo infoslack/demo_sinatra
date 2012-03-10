@@ -1,11 +1,31 @@
 GEM
   remote: http://rubygems.org/
   specs:
+    activemodel (3.2.2)
+      activesupport (= 3.2.2)
+      builder (~> 3.0.0)
+    activesupport (3.2.2)
+      i18n (~> 0.6)
+      multi_json (~> 1.0)
     awesome_print (1.0.2)
+    bson (1.6.1)
+    bson_ext (1.6.1)
+      bson (~> 1.6.1)
+    builder (3.0.0)
     coderay (1.0.5)
     daemons (1.1.8)
     eventmachine (0.12.10)
+    i18n (0.6.0)
     method_source (0.7.1)
+    mongo (1.6.1)
+      bson (~> 1.6.1)
+    mongo_mapper (0.11.0)
+      activemodel (~> 3.0)
+      activesupport (~> 3.0)
+      plucky (~> 0.4.0)
+    multi_json (1.1.0)
+    plucky (0.4.4)
+      mongo (~> 1.5)
     pry (0.9.8.4)
       coderay (~> 1.0.5)
       method_source (~> 0.7.1)
@@ -36,6 +56,8 @@ PLATFORMS
 
 DEPENDENCIES
   awesome_print
+  bson_ext
+  mongo_mapper
   pry
   racksh
   shotgun
