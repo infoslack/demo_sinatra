@@ -1,0 +1,3 @@
+class ListPresenter < Presenter
+
+end

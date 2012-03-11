@@ -1,6 +1,7 @@
 source :rubygems
 
 gem "sinatra"
+gem "simple_presenter"
 gem "mongo_mapper"
 gem "bson_ext"
 

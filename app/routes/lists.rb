@@ -1,5 +1,5 @@
 get "/lists" do
-  @lists = List.all
+  @lists = ListsPresenter.new(List.all)
   erb :"lists/index"
 end
 
