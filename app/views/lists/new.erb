@@ -1,0 +1,10 @@
+<form action="/lists/new" method="post">
+  <p>
+    <%= @form.label :name %>
+    <%= @form.text :name %>
+  </p>
+
+  <p>
+    <%= @form.submit :create %>
+  </p>
+</form>

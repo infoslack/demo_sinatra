@@ -3,7 +3,7 @@ class ListsPresenter < BasePresenter
     if @subject.empty?
       render_template :"lists/no_items"
     else
-      render_template :"lists/list", :locals => {:lists => @subject}
+      render_template :"lists/list", {:lists => @subject}
     end
   end
 end
