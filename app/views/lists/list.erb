@@ -1,9 +1,9 @@
 <% lists.each do |list| %>
   <p>
-    <%= list.name %>
+    <a href="/lists/<%= list.id.to_s %>"><%= list.name %></a>
   </p>
 <% end %>
 
 <p>
-  <a href="/lists/new">Add new list </a>
+  <a href="/lists/new">Adicione uma nova Lista</a>
 </p>

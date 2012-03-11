@@ -1,3 +1,3 @@
 get "/" do
-  "hello world!"
+  "Todo List em Sinatra"
 end

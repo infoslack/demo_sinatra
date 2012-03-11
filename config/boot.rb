@@ -1,10 +1,12 @@
 require "bundler"
 
 ENV["RACK_ENV"] ||= "development"
-Bundler.setup(:default, ENV["RACK_ENV"])
+Bundler.setup(:default, :local)
 Bundler.require
 
-Dir[File.expand_path("../../app/**/*.rb", __FILE__)].each do |file|
+files = Dir[File.expand_path("../../app/**/*.rb", __FILE__)].sort
+
+files.each do |file|
   require file
 end
 

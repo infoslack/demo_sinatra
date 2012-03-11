@@ -38,7 +38,7 @@ post "/lists/new" do
   @form = Form.new(@list, :list)
 
   if @list.save
-    session[:notice] = "List created! Try adding some tasks."
+    session[:notice] = "Lista criada com sucesso. Tente adicionar algumas tarefas."
     redirect to("/lists/#{@list.id.to_s}")
   else
     erb :"lists/new"

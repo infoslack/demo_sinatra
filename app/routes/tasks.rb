@@ -1,3 +1,5 @@
+#encoding = utf-8
+
 post "/lists/:list/tasks/new" do
   @list = List.find(params[:list])
   halt 404 unless @list
@@ -5,7 +7,7 @@ post "/lists/:list/tasks/new" do
   @form = Form.new(@task, :task)
 
   if @task.save
-    session[:notice] = "You task was added!"
+    session[:notice] = "Você adicionou uma tarefa!"
     redirect to("/lists/#{@list.id.to_s}")
   else
     erb :"lists/show"
