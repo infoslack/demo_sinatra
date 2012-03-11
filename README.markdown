@@ -3,6 +3,9 @@
 Neste Demo foi utilizado:
 
  -Sinatra
+
  -Presenters
+
  -MongoDB
+
  -Rspec
