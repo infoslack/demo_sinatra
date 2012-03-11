@@ -16,8 +16,9 @@ post "/lists/:list/tasks/:id/toggle" do
   @list = List.find(params[:list])
   halt 404 unless @list
 
-  @task = @list.tasks.find(params[:task])
+  @task = @list.tasks.find(params[:id])
   halt 404 unless @task
 
-  {:success => @task.toggle!}
+  content_type :json
+  {:success => @task.toggle!}.to_json
 end

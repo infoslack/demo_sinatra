@@ -1,3 +1,15 @@
+get "/lists.:format" do
+  @lists = List.all
+
+  case params[:format].to_sym
+  when :json
+    content_type :json
+    @lists.to_json
+  when :xml
+    builder :"lists/index"
+  end
+end
+
 get "/lists/?" do
   @lists = ListsPresenter.new(List.all)
   erb :"lists/index"
