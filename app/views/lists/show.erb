@@ -1,1 +1,24 @@
 <h1><%= @list.name %></h1>
+
+<% @list.tasks.ordered.each do |task| %>
+  <p>
+    <input
+      <%= "checked" if task.completed? %>
+      type="checkbox"
+      data-list="<%= @list.id.to_s %>"
+      data-task="<%= task.id.to_s %>"
+    >
+    <%= task.title %>
+  </p>
+<% end %>
+
+<form action="/lists/<%= @list.id %>/tasks/new" method="post">
+  <p>
+    <%= @form.label :title %>
+    <%= @form.text :title %>
+  </p>
+
+  <p>
+    <%= @form.submit "Add task" %>
+  </p>
+</form>

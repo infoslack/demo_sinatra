@@ -36,5 +36,7 @@ end
 get "/lists/:id" do
   @list = List.find(params[:id])
   halt 404 unless @list
+  @task = Task.new
+  @form = Form.new(@task, :task)
   erb :"lists/show"
 end
